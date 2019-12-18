@@ -1,0 +1,40 @@
+server:
+  port: 8044
+
+spring:
+  profiles:
+    active: api, core
+  messages:
+    encoding: UTF-8
+  datasource:
+    druid:
+      ##外网地址
+      url:  jdbc:mysql://47.104.249.145:3306/ding?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false
+      driver-class-name:  com.mysql.jdbc.Driver
+      username:  root
+      password:  ZHUxingcheng!!94
+      initial-size:  10
+      max-active:  50
+      min-idle:  10
+      max-wait:  60000
+      pool-prepared-statements:  true
+      max-pool-prepared-statement-per-connection-size:  20
+      validation-query:  SELECT 1 FROM DUAL
+      test-on-borrow:  false
+      test-on-return:  false
+      test-while-idle:  true
+      time-between-eviction-runs-millis:  60000
+      #filters:  stat,wall
+pagehelper:
+  helperDialect:  mysql
+  reasonable: false
+  supportMethodsArguments:  true
+  params: count=countSq
+
+logging:
+  level:
+    root:  info
+    org.springframework:  ERROR
+    org.mybatis:  DEBUG
+    com.ding.ding.api:  DEBUG
+    com.ding.ding.core:  DEBUG

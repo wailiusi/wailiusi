@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active: db
+  messages:
+    encoding: UTF-8
+
+pagehelper:
+  helperDialect:  mysql
+  reasonable: false
+  supportMethodsArguments:  true
+  params: count=countSql
