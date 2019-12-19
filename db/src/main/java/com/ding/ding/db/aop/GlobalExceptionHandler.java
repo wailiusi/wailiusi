@@ -43,7 +43,7 @@ public class GlobalExceptionHandler {
         String message = CollectionUtils.isEmpty(list) || StringUtils.isEmpty(list.get(0).getDefaultMessage()) ? "参数值不能为空" : list.get(0).getDefaultMessage();
         log.error("param not valid,url:{},exception:{}", request.getRequestURI(), message);
         return ResponseResult.error(CoreExceptionEnum.PARAMETER_VERIFICATION_FAILED);
-        
+
     }
 
     @ExceptionHandler(ShiroException.class)

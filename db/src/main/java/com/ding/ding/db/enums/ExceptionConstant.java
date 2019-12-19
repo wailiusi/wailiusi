@@ -1,11 +1,5 @@
 package com.ding.ding.db.enums;
 
-/**
- * @Author: wy
- * @Date: Created in 1:07 2019/8/11
- * @Description:
- * @Modified: By：
- */
 public class ExceptionConstant {
 
     /**
