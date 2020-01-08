@@ -14,6 +14,7 @@ import com.ding.ding.db.vo.response.admin.admin.SysAdminVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -33,7 +34,7 @@ public class AdminAdminController extends BaseController {
     private SysAdminService adminService;
 
     @ApiOperation(value = "添加")
-    //@RequiresPermissions("admin:admin:create")
+    @RequiresPermissions("admin:admin:create")
     @RequiresPermissionsDesc(menu = {"系统管理", "管理员"}, button = "添加")
     @PostMapping("/create")
     public ResponseResult<SysAdminVo> create(@RequestBody @Valid AdminLogin admin) {

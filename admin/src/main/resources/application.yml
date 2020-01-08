@@ -9,10 +9,10 @@ spring:
   datasource:
     druid:
       ##外网地址
-      url:  jdbc:mysql://47.104.249.145:3306/ding?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false
+      url:  jdbc:mysql://111.229.119.194:3306/ding?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false
       driver-class-name:  com.mysql.jdbc.Driver
       username:  root
-      password:  ZHUxingcheng!!94
+      password:  root
       initial-size:  10
       max-active:  50
       min-idle:  10
