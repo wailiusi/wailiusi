@@ -15,6 +15,7 @@ public enum CoreExceptionEnum implements AbstractBaseExceptionEnum {
     USER_UNAUTHORIZED(423, "dingding.no.have.privilege", "无权访问"),
     USER_UNAUTHENTICATED(424, "dingding.login.error", "未授权"),
     USER_SHIRO_ERROR(425, "dingding.shiro.error", "SHIRO运行出错"),
+    ADMIN_INVALID_ACCOUNT(426,"admin.invalid.account","账号或密码错误"),
     DELECT_FAILED(499, "dingding.delete.error", "删除失败");
 
     private Integer code;

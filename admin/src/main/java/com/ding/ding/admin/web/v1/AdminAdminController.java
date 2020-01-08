@@ -12,6 +12,7 @@ import com.ding.ding.db.service.SysAdminService;
 import com.ding.ding.db.vo.response.ResponseResult;
 import com.ding.ding.db.vo.response.admin.admin.SysAdminVo;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -37,9 +38,9 @@ public class AdminAdminController extends BaseController {
     @RequiresPermissions("admin:admin:create")
     @RequiresPermissionsDesc(menu = {"系统管理", "管理员"}, button = "添加")
     @PostMapping("/create")
+    @ApiImplicitParam(name = "X-Litemall-Admin-Token", value = "登录返回的token", paramType = "header", dataType = "String")
     public ResponseResult<SysAdminVo> create(@RequestBody @Valid AdminLogin admin) {
         //验证
-
         String username = admin.getUsername();
         List<SysAdmin> adminList = adminService.findAdmin(username);
         if (adminList.size() > 0) {

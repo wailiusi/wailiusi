@@ -15,6 +15,7 @@ import javax.validation.constraints.NotBlank;
 @AllArgsConstructor
 @Accessors(chain = true)
 public class AdminLogin {
+
     @ApiModelProperty(notes = "名称")
     @NotBlank(message = "姓名不可为空")
     private String username;
