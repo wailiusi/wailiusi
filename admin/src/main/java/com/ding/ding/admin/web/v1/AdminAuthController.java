@@ -30,7 +30,7 @@ public class AdminAuthController {
         Subject currentUser = SecurityUtils.getSubject();
         try {
             currentUser.login(new UsernamePasswordToken(username, password));
-        } catch (Exception uae) {
+        } catch (Exception e) {
             throw new ServiceException(CoreExceptionEnum.ADMIN_INVALID_ACCOUNT);
         }
         currentUser = SecurityUtils.getSubject();
