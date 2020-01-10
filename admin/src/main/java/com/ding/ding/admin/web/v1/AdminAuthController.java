@@ -7,6 +7,7 @@ import com.ding.ding.db.enums.CoreExceptionEnum;
 import com.ding.ding.db.exception.ServiceException;
 import com.ding.ding.db.service.SysAdminService;
 import com.ding.ding.db.vo.response.ResponseResult;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
@@ -18,6 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.time.LocalDateTime;
 
+@Slf4j
 public class AdminAuthController {
 
     @Autowired
